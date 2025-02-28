@@ -8,19 +8,16 @@
 body {
     background-color: #15031d;
     color: white;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;  
+    min-height: 100vh;
     text-align: center;
     overflow-x: hidden;
-    overflow-y: auto;
 }
 
-
+/* ✅ CONTAINER PRINCIPAL */
 .container {
     display: flex;
     flex-direction: column;
@@ -29,11 +26,10 @@ body {
     text-align: center;
     min-height: 50vh;
     width: 100%;
-    padding-bottom: 50px; 
-    padding-top: 50;
+    padding: 50px 20px; /* Ajout d'un padding responsive */
 }
 
-
+/* ✅ TITRES */
 h1 {
     font-size: 2em;
     margin-bottom: 10px;
@@ -44,6 +40,7 @@ p {
     margin-bottom: 20px;
 }
 
+/* ✅ BOUTON PRINCIPAL */
 .btn-join {
     padding: 10px 20px;
     background-color: #F6C800;
@@ -52,15 +49,14 @@ p {
     border-radius: 5px;
     font-size: 1.2em;
     transition: background-color 0.3s;
-    margin-bottom: 20px; 
-    margin-top: 10px;
+    margin: 10px 0;
 }
-
 
 .btn-join:hover {
     background-color: #5b6eae;
 }
 
+/* ✅ HEADER */
 header {
     background: #15031d;
     color: white;
@@ -101,29 +97,24 @@ header a:hover {
     transform: scale(1.05);
 }
 
-
+/* ✅ FOOTER */
 footer {
     background: #15031d; 
     color: white;
     text-align: center;
     padding: 20px 0; 
-    position: relative;
     width: 100%;
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    height: 500px; 
+    height: auto;
 }
-
-
 
 footer p {
-    margin: 0;
-    font-size: 0px;
-    letter-spacing: 0.5px;
+    font-size: 14px;
 }
 
-
+/* ✅ BOUTONS GÉNÉRIQUES */
 button {
     background-color: #15031d;
     color: white;
@@ -150,55 +141,19 @@ button:active {
     transform: scale(0.98);
 }
 
-.contact-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -100px; 
+/* ✅ BANNIÈRE */
+.banniere {
+    background-image: url('banniere.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 90%;
+    max-width: 1200px;
+    height: 500px;
+    border-radius: 15px;
 }
 
-.contact-text {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.2;
-    white-space: nowrap;
-}
-
-.titre-text {
-    font-size: 32px;
-    font-weight: bold;
-    line-height: 1.2;
-    white-space: nowrap;
-}
-
-.discord-link {
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    padding: 8px 16px;
-    background-color: #7289da;
-    border-radius: 8px;
-    margin-top: 10px;
-    display: inline-block;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.discord-link:hover {
-    background-color: #5b6eae;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: "banniere.jpg";
-    z-index: -1;
-}
-
+/* ✅ MENU NAVIGATION */
 .menu {
     display: flex;
     justify-content: center;
@@ -224,27 +179,7 @@ button:active {
     background: #3b034e;
 }
 
-.discord-widget {
-
-    left: 20px;
-
-    border-radius: 15px;
-}
-
-
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu a {
-        width: 80%;
-        justify-content: center;
-    }
-
-}
-
+/* ✅ SLIDER */
 .swipe-container {
     display: flex;
     overflow-x: auto;
@@ -269,53 +204,24 @@ button:active {
     padding: 20px;
 }
 
+/* ✅ ESPACEMENTS */
 .space {
-
-    height: 100px; 
+    height: 100px;
 }
 
 .space_mini {
     height: 25px;
 }
 
-.banniere {
-    background-image: url('banière.jpg'); 
-    background-size: 100% auto; 
-    background-position: top center; 
-    background-repeat: no-repeat;
-    width: 75%;
-    height: 650px; 
-}
-
-.iframe-container {
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    width: 100%;
-}
-
-.youtube {
-    color: #FF0000; /* Rouge YouTube */
-}
-.tiktok {
-    color: #69C9D0; /* Bleu TikTok */
-}
-.instagram {
-    color: #E1306C; /* Rose Instagram */
-}
-.spotify {
-    color: #1DB954; /* Vert Spotify */
-}
-
+/* ✅ LIENS RÉSEAUX SOCIAUX */
 .social-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    font-size: 22px; /* ✅ Texte plus grand */
+    font-size: 22px;
 }
+
 .social-container a {
     text-decoration: none;
     font-weight: bold;
@@ -325,21 +231,46 @@ button:active {
 }
 
 .fab {
-    font-size: 30px; /* ✅ Icônes plus grandes */
+    font-size: 30px;
     transition: transform 0.2s ease-in-out;
 }
+
 .fab:hover {
     transform: scale(1.2);
 }
-.youtube {
-    color: #FF0000;
-}
-.tiktok {
-    color: #69C9D0;
-}
-.instagram {
-    color: #E1306C;
-}
-.spotify {
-    color: #1DB954;
+
+/* ✅ COULEURS RÉSEAUX SOCIAUX */
+.youtube { color: #FF0000; }
+.tiktok { color: #69C9D0; }
+.instagram { color: #E1306C; }
+.spotify { color: #1DB954; }
+
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .banniere {
+        height: 300px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
 }
