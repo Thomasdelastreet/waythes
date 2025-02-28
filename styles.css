@@ -1,3 +1,4 @@
+/* RESET GÉNÉRAL */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +18,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ✅ CONTAINER PRINCIPAL */
+/* CONTAINER PRINCIPAL */
 .container {
     display: flex;
     flex-direction: column;
@@ -26,12 +27,12 @@ body {
     text-align: center;
     min-height: 50vh;
     width: 100%;
-    padding: 50px 20px; /* Ajout d'un padding responsive */
+    padding: 50px 20px;
 }
 
-/* ✅ TITRES */
+/* TITRES ET TEXTES */
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
@@ -40,9 +41,9 @@ p {
     margin-bottom: 20px;
 }
 
-/* ✅ BOUTON PRINCIPAL */
+/* BOUTON PRINCIPAL */
 .btn-join {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #F6C800;
     color: white;
     text-decoration: none;
@@ -56,7 +57,7 @@ p {
     background-color: #5b6eae;
 }
 
-/* ✅ HEADER */
+/* HEADER */
 header {
     background: #15031d;
     color: white;
@@ -97,55 +98,27 @@ header a:hover {
     transform: scale(1.05);
 }
 
-/* ✅ FOOTER */
+/* FOOTER */
 footer {
-    background: #15031d; 
+    background: #15031d;
     color: white;
     text-align: center;
-    padding: 20px 0; 
+    padding: 20px 0;
     width: 100%;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer p {
     font-size: 14px;
 }
 
-/* ✅ BOUTONS GÉNÉRIQUES */
-button {
-    background-color: #15031d;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-button:hover {
-    background-color: #3b034e;
-    transform: scale(1.05);
-}
-
-button:active {
-    background-color: #15031d;
-    transform: scale(0.98);
-}
-
-/* ✅ BANNIÈRE */
+/* BANNIÈRE */
 .banniere {
-    background-image: url('banniere.jpg'); 
-    background-size: cover; 
-    background-position: center; 
+    background-image: url('banniere.jpg');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     width: 90%;
     max-width: 1200px;
@@ -153,7 +126,7 @@ button:active {
     border-radius: 15px;
 }
 
-/* ✅ MENU NAVIGATION */
+/* MENU NAVIGATION */
 .menu {
     display: flex;
     justify-content: center;
@@ -179,41 +152,7 @@ button:active {
     background: #3b034e;
 }
 
-/* ✅ SLIDER */
-.swipe-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-}
-
-.swipe-item {
-    flex: 0 0 100%;
-    scroll-snap-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 300px;
-    background: #3b034e;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 20px;
-}
-
-/* ✅ ESPACEMENTS */
-.space {
-    height: 100px;
-}
-
-.space_mini {
-    height: 25px;
-}
-
-/* ✅ LIENS RÉSEAUX SOCIAUX */
+/* RÉSEAUX SOCIAUX */
 .social-container {
     display: flex;
     flex-direction: column;
@@ -239,14 +178,18 @@ button:active {
     transform: scale(1.2);
 }
 
-/* ✅ COULEURS RÉSEAUX SOCIAUX */
+/* COULEURS RÉSEAUX SOCIAUX */
 .youtube { color: #FF0000; }
 .tiktok { color: #69C9D0; }
 .instagram { color: #E1306C; }
 .spotify { color: #1DB954; }
 
-/* ✅ RESPONSIVE DESIGN */
-@media (max-width: 768px) {
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) { /* TABLETTES (iPad) */
+    .banniere {
+        height: 400px;
+    }
+
     .menu {
         flex-direction: column;
         align-items: center;
@@ -256,7 +199,9 @@ button:active {
         width: 80%;
         justify-content: center;
     }
+}
 
+@media (max-width: 768px) { /* MOBILES */
     .banniere {
         height: 300px;
         width: 100%;
